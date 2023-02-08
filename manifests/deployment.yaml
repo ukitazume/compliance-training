@@ -20,6 +20,7 @@ spec:
           securityContext:
             runAsUser: 1000
             allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
           image: nginx:1.14.2
           resources:
             requests:
