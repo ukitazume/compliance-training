@@ -15,6 +15,7 @@ spec:
       labels:
         app: app
     spec:
+      serviceAccountName: default
       containers:
         - name: app
           securityContext:
