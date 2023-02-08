@@ -15,9 +15,18 @@ spec:
       labels:
         app: app
     spec:
+      serviceAccountName: default
       containers:
         - name: app
-          image: nginx:1.14.2
+          securityContext:
+            runAsUser: 10001
+            runAsGroup: 10001
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          image: nginx:sha256@295c7be079025306c4f1d65997fcf7adb411c88f139ad1d34b537164aa060369
           resources:
             requests:
               cpu: 100m
