@@ -17,6 +17,8 @@ spec:
     spec:
       containers:
         - name: app
+          securityContext:
+            runAsUser: 1000
           image: nginx:1.14.2
           resources:
             requests:
