@@ -26,7 +26,7 @@ spec:
             readOnlyRootFilesystem: true
             capabilities:
               drop: ["ALL"]
-          image: nginx:1.14.2
+          image: nginx:sha256@295c7be079025306c4f1d65997fcf7adb411c88f139ad1d34b537164aa060369
           resources:
             requests:
               cpu: 100m
